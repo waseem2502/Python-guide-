@@ -1,7 +1,8 @@
 # PyNotes
 
 A searchable Python reference for coding practice, inspired by personal Python notes. Browse topics, copy examples, and save useful notes in your browser.
-
+Website URL : https://waseem2502.github.io/Python-guide-/ 
+ 
 ## Run locally
 
 Open `index.html` in a browser. No installation or server is required. Fonts and icons are loaded from external services and require an internet connection. Saved notes are stored in the browser on the current device.

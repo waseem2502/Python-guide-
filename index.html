@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f1">
+  <meta name="description" content="A practical Python reference for solving coding problems.">
+  <title>PyNotes | Your problem-solving companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="PyNotes home"><span class="brand-mark">py<span>.</span></span><span>pynotes<small>THE PYTHON PLAYBOOK</small></span></a>
+      <div class="sidebar-label">YOUR WORKSPACE</div>
+      <nav class="main-nav">
+        <button class="nav-item active" data-view="all"><i data-lucide="layout-grid"></i> Explore notes <span class="nav-arrow">&#8599;</span></button>
+        <button class="nav-item" data-view="saved"><i data-lucide="bookmark"></i> Saved notes <span id="saved-count" class="nav-count">0</span></button>
+      </nav>
+      <div class="sidebar-label topics-label">BROWSE BY TOPIC</div>
+      <nav id="topic-nav" class="topic-nav" aria-label="Topics"></nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> MADE FOR THE PROCESS <span class="sidebar-star">&#10035;</span></div>
+    </aside>
+
+    <main id="home" class="main">
+      <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <strong id="breadcrumb-current">EXPLORE</strong></div><a href="https://leetcode.com/problemset/" target="_blank" rel="noopener noreferrer" class="leetcode-link">LeetCode <i data-lucide="arrow-up-right"></i></a></header>
+      <div class="content">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy"><div class="eyebrow"><span></span> YOUR CODING COMPANION <span class="eyebrow-number"> / 01</span></div><h1 id="page-title">Think better.<br><em>Code smarter.</em></h1><p>A little Python knowledge goes a long way. Find the right tool, remember the pattern, and get back to solving.</p><div class="intro-meta"><span><i data-lucide="book-open"></i> PYTHON REFERENCE</span><span class="meta-divider"></span><span><i data-lucide="zap"></i> BUILT FOR PRACTICE</span></div></div>
+          <div class="hero-art" aria-hidden="true"><div class="art-top"><span>THE PRACTICE FILE</span><span>PY / 01</span></div><div class="art-symbols"><span>{</span><span class="art-star">&#10035;</span><span>}</span></div><div class="art-bottom"><span>SMALL STEPS.<br>BIG IDEAS.</span><span class="art-arrow">&#8599;</span></div></div>
+        </section>
+        <section class="library" aria-labelledby="library-title">
+          <div class="section-heading"><div><div class="eyebrow section-eyebrow"><span></span> THE GOOD STUFF</div><h2 id="library-title">Explore the library<span class="heading-period">.</span></h2><p id="library-description">A handy collection for your next problem.</p></div><div class="note-total"><span id="total-count">00</span><small>NOTES TO<br>EXPLORE</small></div></div>
+          <div class="controls"><label class="search"><i data-lucide="search"></i><input id="search" type="search" placeholder="Search topics, methods, or patterns..." autocomplete="off"><span class="search-hint">SEARCH</span></label><div class="filter-wrap"><label class="sr-only" for="topic-filter">Filter by topic</label><select id="topic-filter"><option value="all">All topics</option></select><i data-lucide="chevron-down"></i></div></div>
+          <div class="results-bar"><span id="result-count" aria-live="polite"></span><span>YOUR PYTHON TOOLKIT <span class="results-star">&#10035;</span></span></div>
+          <div id="notes-grid" class="notes-grid"></div>
+          <div id="empty-state" class="empty-state" hidden><span>&#10035;</span><h3>Nothing here just yet.</h3><p id="empty-message">Try another search or topic.</p><button id="clear-filters" class="clear-button">Clear filters <span>&#8599;</span></button></div>
+        </section>
+        <footer><span>PYNOTES <span class="footer-dot">&#9679;</span> A LITTLE BETTER EVERY DAY.</span><span>KEEP SHOWING UP <span class="footer-arrow">&#8599;</span></span></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
